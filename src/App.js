@@ -1,11 +1,17 @@
-import Reactfrom 'react';
-import axios from "axios";
+import React, {useEffect} from "react";
+import {useDispatch} from "react-redux";
+import {loadGamesCreator} from "./actions/gamesAction";
 
 const App = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(loadGamesCreator())
+    }, [])
 
     return (
         <div>
-            hello
+            dsa
         </div>
     )
 }
