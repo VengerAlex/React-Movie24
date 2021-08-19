@@ -6,6 +6,7 @@ export const loadGamesCreator = () => async (dispatch) => {
     const popularData = await axios.get(popularGamerURL());
     const upComingData = await axios.get(upcomingGamerURL());
     const newGagesData = await axios.get(newGamerURL());
+
     dispatch({
         type: 'FETCH_GAMES',
         payload: {
@@ -15,3 +16,4 @@ export const loadGamesCreator = () => async (dispatch) => {
         }
     })
 }
+

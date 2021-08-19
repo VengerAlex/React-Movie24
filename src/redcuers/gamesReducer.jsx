@@ -11,7 +11,7 @@ const gamesReducer = (state = initState, action) => {
         case 'FETCH_GAMES':
             return {...state,
                 popular: action.payload.popular,
-                upcoming: action.payload.upcoming,
+                upcoming: action.payload.newgames,
                 newgames: action.payload.newgames
             }
         default:
